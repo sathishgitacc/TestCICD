@@ -24,3 +24,10 @@ steps:
   inputs:
     containerRegistry: 'dockerconn'
     command: 'login'
+- task: Docker@2
+  inputs:
+    containerRegistry: 'dockerconn'
+    repository: 'sathishdocker1984/pushdockerimage'
+    command: 'buildAndPush'
+    Dockerfile: '**/AzureDockerfile'
+
